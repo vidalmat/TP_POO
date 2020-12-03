@@ -63,7 +63,7 @@ abstract class Personnage implements Attaquant, Cible{
         if($this->sante <= 0){
             $this->vie = true;
         }
-        abstract function attaquer(Cible $cible);
+        
     }
 
     /**/

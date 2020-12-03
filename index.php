@@ -1,11 +1,13 @@
 <?php
 
 require_once "Attaquant.php";
+require_once "Cible.php";
 require_once "Personnage.php";
 require_once "archer.php";
 require_once "magicien.php";
 require_once "guerrier.php";
 require_once "Creature.php";
+
 
 
 
