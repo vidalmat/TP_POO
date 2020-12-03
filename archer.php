@@ -35,14 +35,14 @@ class Archer extends Personnage{
 
     
     function tirer(Personnage $perso){
-        return  $this->nom . "Je tire une flèche sur " . $perso->getNom();
+       
         $degats = $this->force;
-            return  $this->nom . "Je frappe sur " . $perso->getNom();
             if($perso instanceof Magicien){
-                echo "Dégats supplémentaires";
+                echo "Dégats supplémentaires" . "<br>";
                 $degats += 10;
             }
             $perso->subirDegat($degats);
+            return  $this->nom . "Je tire une flèche sur " . $perso->getNom() . "<br>";
         }
     }
     

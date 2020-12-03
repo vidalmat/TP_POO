@@ -22,12 +22,13 @@
         
         function frapper(Personnage $perso){
             $degats = $this->force;
-            return  $this->nom . "Je frappe sur " . $perso->getNom();
+            
             if($perso instanceof Archer){
-                echo "Dégats supplémentaires";
+                echo "Dégats supplémentaires" . "<br>";
                 $degats += 5;
             }
             $perso->subirDegat($degats);
+            return  $this->nom . "Je frappe sur " . $perso->getNom() . "<br>";
             }
 }
 ?>

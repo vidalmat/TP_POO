@@ -20,14 +20,14 @@ class Magicien extends Personnage{
     
         
         function magie(Personnage $perso){
-            return  $this->nom . "Je jette un sort sur " . $perso->getNom();
+            
             $degats = $this->force;
-            return  $this->nom . "Je frappe sur " . $perso->getNom();
             if($perso instanceof Guerrier){
-                echo "Dégats supplémentaires";
+                echo "Dégats supplémentaires" . "<br>";
                 $degats += 8;
             }
             $perso->subirDegat($degats);
+            return  $this->nom . "Je jette un sort sur " . $perso->getNom() . "<br>";
             }
 }
 ?>
