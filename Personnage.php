@@ -1,7 +1,7 @@
 <?php
 
 
-class Personnage {
+abstract class Personnage {
 
     protected $nom;
     protected $force;
@@ -33,13 +33,7 @@ class Personnage {
 
     /* exo numéro 4 */
 
-    function attaquer(Personnage $personnage){
-        
-            // echo $this->nom . " attaque " . $personnage->getNom() . "<br>";
-            $personnage->subirDegat($this->force);
-
-    }
-
+    abstract function attaquer(Personnage $personnage);
 
     function tirer(Personnage $perso){
         return  $this->nom . "Je tire une flèche sur " . $perso->getNom();
@@ -58,8 +52,6 @@ class Personnage {
         return  $this->nom . "Je frappe sur " . $perso->getNom();
         $perso->subirDegat(10);
         }
-
-
 
 
     function subirDegat(int $degats){

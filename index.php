@@ -24,21 +24,22 @@ $perso3 = new Magicien("Joker", 25, 100, 1);
 
 
 var_dump($perso1->getNom());
-
-
+var_dump($perso2->getNom());
+var_dump($perso3->getNom());
 
 echo $perso1->caracteristiques();
 echo $perso2->caracteristiques();
 echo $perso3->caracteristiques();
 
 
-
-$perso1->attaquer($perso2);
+$perso1->attaquer($perso3);
 $perso2->attaquer($perso1);
 $perso3->attaquer($perso1);
 
 echo $perso1->caracteristiques();
 echo $perso2->caracteristiques();
 echo $perso3->caracteristiques();
+
+
 
 ?>
