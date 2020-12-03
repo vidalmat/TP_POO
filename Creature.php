@@ -1,6 +1,6 @@
 <?php
 
-class Creature implements Attaquant {
+class Creature implements Attaquant, Cible{
 
     private $race;
     private $hp;
@@ -10,8 +10,18 @@ class Creature implements Attaquant {
         $this->hp = $hp;
     }
 
-    function attaquer(Personnage $perso){
+    function attaquer(Cible $cible){
         echo "Créature " . $this->race . " attaque!";
+    }
+
+
+    function degats($degats) {
+        $this->vie -= $degats;
+        if($this->sante <= 0){
+            $this->vie = true;
+    }
+        function attaquer(Cible $cible) {
+        $cible->degats(15);
     }
 
 }

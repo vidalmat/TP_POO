@@ -1,7 +1,7 @@
 <?php
 
 
-abstract class Personnage implements Attaquant{
+abstract class Personnage implements Attaquant, Cible{
 
     protected $nom;
     protected $force;
@@ -9,6 +9,8 @@ abstract class Personnage implements Attaquant{
     protected $sante;
     protected $vie;
     protected $attaquer;
+    protected $cible;
+    protected $attaquant;
 
 
 
@@ -33,9 +35,9 @@ abstract class Personnage implements Attaquant{
 
     /* exo numéro 4 */
 
-    abstract function attaquer(Personnage $personnage);
+    abstract function attaquer(Cible $cible);
 
-    
+
 
     function tirer(Personnage $perso){
         return  $this->nom . "Je tire une flèche sur " . $perso->getNom();
@@ -61,6 +63,7 @@ abstract class Personnage implements Attaquant{
         if($this->sante <= 0){
             $this->vie = true;
         }
+        abstract function attaquer(Cible $cible);
     }
 
     /**/

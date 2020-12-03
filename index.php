@@ -32,7 +32,7 @@ var_dump($perso1->getNom());
 var_dump($perso2->getNom());
 var_dump($perso3->getNom());
 
-var_dump($creature->getNom());
+var_dump($creature);
 
 
 echo $perso1->caracteristiques();
@@ -49,5 +49,7 @@ echo $perso2->caracteristiques();
 echo $perso3->caracteristiques();
 
 $creature->attaquer($perso3);
+
+echo $perso1->caracteristiques();
 
 ?>

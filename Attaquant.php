@@ -2,12 +2,8 @@
 
 interface Attaquant {
 
-    function attaquer(Personnage $perso);
+    function attaquer(Cible $perso);
 
 }
-
-
-
-
 
 ?>
