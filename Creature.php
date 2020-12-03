@@ -1,13 +1,13 @@
 <?php
 
-class Creature implements Attaquant{
+class Creature implements Attaquant {
 
     private $race;
-    private $sante;
+    private $hp;
 
-    function __construct($race, $sante = 250){
+    function __construct($race, $hp = 250){
         $this->race = $race;
-        $this->sante = $sante;
+        $this->hp = $hp;
     }
 
     function attaquer(Personnage $perso){

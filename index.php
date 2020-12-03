@@ -31,7 +31,9 @@ $creature = new Creature("Balrog");
 var_dump($perso1->getNom());
 var_dump($perso2->getNom());
 var_dump($perso3->getNom());
+
 var_dump($creature->getNom());
+
 
 echo $perso1->caracteristiques();
 echo $perso2->caracteristiques();
