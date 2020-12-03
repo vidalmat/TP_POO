@@ -5,7 +5,7 @@ class Creature implements Attaquant{
     private $race;
     private $sante;
 
-    function__construct($race, $sante = 250){
+    function __construct($race, $sante = 250){
         $this->race = $race;
         $this->sante = $sante;
     }
